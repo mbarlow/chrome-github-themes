@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Themes</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="title">GitHub Themes</h1>
+      <p class="subtitle">Apply IDE themes to GitHub</p>
+    </header>
+
+    <main class="main">
+      <div class="theme-grid" id="themeGrid">
+        <!-- Default Theme -->
+        <div class="theme-card" data-theme="default">
+          <div class="theme-preview default-preview">
+            <div class="preview-header"></div>
+            <div class="preview-content">
+              <div class="preview-line"></div>
+              <div class="preview-line short"></div>
+              <div class="preview-line"></div>
+            </div>
+          </div>
+          <div class="theme-info">
+            <h3 class="theme-name">Default</h3>
+            <p class="theme-description">GitHub's original theme</p>
+          </div>
+        </div>
+
+        <!-- Gruvbox Dark -->
+        <div class="theme-card" data-theme="gruvbox-dark">
+          <div class="theme-preview gruvbox-preview">
+            <div class="preview-header"></div>
+            <div class="preview-content">
+              <div class="preview-line"></div>
+              <div class="preview-line short"></div>
+              <div class="preview-line"></div>
+            </div>
+          </div>
+          <div class="theme-info">
+            <h3 class="theme-name">Gruvbox Dark</h3>
+            <p class="theme-description">Retro groove color scheme</p>
+          </div>
+        </div>
+
+        <!-- Molokai -->
+        <div class="theme-card" data-theme="molokai">
+          <div class="theme-preview molokai-preview">
+            <div class="preview-header"></div>
+            <div class="preview-content">
+              <div class="preview-line"></div>
+              <div class="preview-line short"></div>
+              <div class="preview-line"></div>
+            </div>
+          </div>
+          <div class="theme-info">
+            <h3 class="theme-name">Molokai</h3>
+            <p class="theme-description">Dark theme inspired by Monokai</p>
+          </div>
+        </div>
+
+        <!-- Catppuccin Mocha -->
+        <div class="theme-card" data-theme="catppuccin-mocha">
+          <div class="theme-preview catppuccin-preview">
+            <div class="preview-header"></div>
+            <div class="preview-content">
+              <div class="preview-line"></div>
+              <div class="preview-line short"></div>
+              <div class="preview-line"></div>
+            </div>
+          </div>
+          <div class="theme-info">
+            <h3 class="theme-name">Catppuccin</h3>
+            <p class="theme-description">Soothing pastel theme</p>
+          </div>
+        </div>
+
+        <!-- Solarized Dark -->
+        <div class="theme-card" data-theme="solarized-dark">
+          <div class="theme-preview solarized-preview">
+            <div class="preview-header"></div>
+            <div class="preview-content">
+              <div class="preview-line"></div>
+              <div class="preview-line short"></div>
+              <div class="preview-line"></div>
+            </div>
+          </div>
+          <div class="theme-info">
+            <h3 class="theme-name">Solarized Dark</h3>
+            <p class="theme-description">Precision colors for machines</p>
+          </div>
+        </div>
+
+        <!-- Nord -->
+        <div class="theme-card" data-theme="nord">
+          <div class="theme-preview nord-preview">
+            <div class="preview-header"></div>
+            <div class="preview-content">
+              <div class="preview-line"></div>
+              <div class="preview-line short"></div>
+              <div class="preview-line"></div>
+            </div>
+          </div>
+          <div class="theme-info">
+            <h3 class="theme-name">Nord</h3>
+            <p class="theme-description">Arctic, north-bluish color palette</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="status" id="status">
+        <span class="status-text">Ready</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

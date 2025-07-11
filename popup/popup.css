@@ -1,0 +1,327 @@
+/* Popup CSS for Chrome GitHub Themes Extension
+ * MVP.css inspired minimal styling
+ */
+
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #24292f;
+  background-color: #ffffff;
+  width: 380px;
+  min-height: 500px;
+}
+
+/* Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 500px;
+}
+
+/* Header */
+.header {
+  padding: 16px 20px 12px;
+  border-bottom: 1px solid #d1d9e0;
+  background-color: #f6f8fa;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #24292f;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: #656d76;
+  margin: 0;
+}
+
+/* Main content */
+.main {
+  flex: 1;
+  padding: 16px 20px;
+  overflow-y: auto;
+}
+
+/* Theme grid */
+.theme-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* Theme cards */
+.theme-card {
+  border: 2px solid #d1d9e0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.theme-card:hover {
+  border-color: #0969da;
+  box-shadow: 0 3px 12px rgba(9, 105, 218, 0.15);
+  transform: translateY(-1px);
+}
+
+.theme-card.active {
+  border-color: #0969da;
+  box-shadow: 0 0 0 1px #0969da;
+}
+
+/* Theme previews */
+.theme-preview {
+  height: 80px;
+  border-radius: 6px 6px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.preview-header {
+  height: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.preview-content {
+  padding: 8px;
+  height: 60px;
+}
+
+.preview-line {
+  height: 12px;
+  border-radius: 2px;
+  margin-bottom: 4px;
+  opacity: 0.8;
+}
+
+.preview-line.short {
+  width: 60%;
+}
+
+/* Default theme preview */
+.default-preview {
+  background-color: #ffffff;
+  border: 1px solid #d1d9e0;
+}
+
+.default-preview .preview-header {
+  background-color: #f6f8fa;
+  border-bottom-color: #d1d9e0;
+}
+
+.default-preview .preview-line {
+  background-color: #24292f;
+}
+
+/* Gruvbox Dark preview */
+.gruvbox-preview {
+  background-color: #282828;
+}
+
+.gruvbox-preview .preview-header {
+  background-color: #3c3836;
+}
+
+.gruvbox-preview .preview-line {
+  background-color: #ebdbb2;
+}
+
+.gruvbox-preview .preview-line:nth-child(2) {
+  background-color: #fabd2f;
+}
+
+/* Molokai preview */
+.molokai-preview {
+  background-color: #1b1d1e;
+}
+
+.molokai-preview .preview-header {
+  background-color: #232526;
+}
+
+.molokai-preview .preview-line {
+  background-color: #f8f8f2;
+}
+
+.molokai-preview .preview-line:nth-child(2) {
+  background-color: #ae81ff;
+}
+
+/* Catppuccin preview */
+.catppuccin-preview {
+  background-color: #1e1e2e;
+}
+
+.catppuccin-preview .preview-header {
+  background-color: #313244;
+}
+
+.catppuccin-preview .preview-line {
+  background-color: #cdd6f4;
+}
+
+.catppuccin-preview .preview-line:nth-child(2) {
+  background-color: #89b4fa;
+}
+
+/* Solarized Dark preview */
+.solarized-preview {
+  background-color: #002b36;
+}
+
+.solarized-preview .preview-header {
+  background-color: #073642;
+}
+
+.solarized-preview .preview-line {
+  background-color: #839496;
+}
+
+.solarized-preview .preview-line:nth-child(2) {
+  background-color: #268bd2;
+}
+
+/* Nord preview */
+.nord-preview {
+  background-color: #2e3440;
+}
+
+.nord-preview .preview-header {
+  background-color: #3b4252;
+}
+
+.nord-preview .preview-line {
+  background-color: #d8dee9;
+}
+
+.nord-preview .preview-line:nth-child(2) {
+  background-color: #88c0d0;
+}
+
+/* Theme info */
+.theme-info {
+  padding: 12px;
+}
+
+.theme-name {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 2px;
+  color: #24292f;
+}
+
+.theme-description {
+  font-size: 11px;
+  color: #656d76;
+  margin: 0;
+}
+
+/* Footer */
+.footer {
+  padding: 12px 20px;
+  border-top: 1px solid #d1d9e0;
+  background-color: #f6f8fa;
+}
+
+/* Status */
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-text {
+  font-size: 12px;
+  color: #656d76;
+}
+
+.status.loading .status-text {
+  color: #0969da;
+}
+
+.status.success .status-text {
+  color: #1a7f37;
+}
+
+.status.error .status-text {
+  color: #d1242f;
+}
+
+/* Loading indicator */
+.status.loading::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border: 2px solid #d1d9e0;
+  border-top-color: #0969da;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 6px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 400px) {
+  body {
+    width: 320px;
+  }
+
+  .theme-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .theme-card {
+    max-width: none;
+  }
+}
+
+/* Focus styles for accessibility */
+.theme-card:focus {
+  outline: 2px solid #0969da;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .theme-card {
+    border-width: 3px;
+  }
+
+  .theme-card:hover,
+  .theme-card.active {
+    border-width: 3px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .theme-card {
+    transition: none;
+  }
+
+  .theme-card:hover {
+    transform: none;
+  }
+
+  .status.loading::before {
+    animation: none;
+  }
+}

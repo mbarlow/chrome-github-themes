@@ -1,0 +1,116 @@
+/* Gruvbox Dark Theme for Chrome GitHub Themes Extension
+ * Based on the popular Gruvbox color scheme by morhetz
+ */
+
+@import url('base.css');
+
+:root {
+  /* Primary colors */
+  --gh-bg-primary: #282828;
+  --gh-bg-secondary: #3c3836;
+  --gh-bg-tertiary: #504945;
+
+  /* Text colors */
+  --gh-fg-primary: #ebdbb2;
+  --gh-fg-secondary: #d5c4a1;
+  --gh-fg-tertiary: #bdae93;
+
+  /* Border colors */
+  --gh-border: #504945;
+  --gh-border-muted: #3c3836;
+
+  /* Accent colors */
+  --gh-accent: #fabd2f;
+  --gh-accent-rgb: 250, 189, 47;
+
+  /* Status colors */
+  --gh-error: #fb4934;
+  --gh-success: #b8bb26;
+  --gh-warning: #fe8019;
+
+  /* Gruvbox specific colors for syntax highlighting */
+  --gruvbox-red: #cc241d;
+  --gruvbox-green: #98971a;
+  --gruvbox-yellow: #d79921;
+  --gruvbox-blue: #458588;
+  --gruvbox-purple: #b16286;
+  --gruvbox-aqua: #689d6a;
+  --gruvbox-orange: #d65d0e;
+  --gruvbox-gray: #928374;
+}
+
+/* Syntax highlighting overrides for better Gruvbox experience */
+.pl-c,
+.pl-c1 {
+  color: var(--gruvbox-gray) !important;
+}
+
+.pl-k,
+.pl-kos {
+  color: var(--gruvbox-red) !important;
+}
+
+.pl-s,
+.pl-pds {
+  color: var(--gruvbox-green) !important;
+}
+
+.pl-en {
+  color: var(--gruvbox-blue) !important;
+}
+
+.pl-ent {
+  color: var(--gruvbox-purple) !important;
+}
+
+.pl-smi {
+  color: var(--gh-fg-primary) !important;
+}
+
+.pl-v {
+  color: var(--gruvbox-aqua) !important;
+}
+
+.pl-mi1 {
+  color: var(--gruvbox-green) !important;
+  background-color: rgba(152, 151, 26, 0.2) !important;
+}
+
+.pl-md {
+  color: var(--gruvbox-red) !important;
+  background-color: rgba(204, 36, 29, 0.2) !important;
+}
+
+/* Enhanced link styling */
+a {
+  color: var(--gruvbox-blue) !important;
+}
+
+a:hover {
+  color: var(--gruvbox-aqua) !important;
+}
+
+/* File tree icons */
+.octicon-file-directory-fill {
+  color: var(--gruvbox-yellow) !important;
+}
+
+.octicon-file {
+  color: var(--gh-fg-secondary) !important;
+}
+
+/* Special highlighting for important elements */
+.flash-error {
+  background-color: rgba(251, 73, 52, 0.15) !important;
+  border-color: var(--gh-error) !important;
+}
+
+.flash-success {
+  background-color: rgba(184, 187, 38, 0.15) !important;
+  border-color: var(--gh-success) !important;
+}
+
+.flash-warn {
+  background-color: rgba(254, 128, 25, 0.15) !important;
+  border-color: var(--gh-warning) !important;
+}

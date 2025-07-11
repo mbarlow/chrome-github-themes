@@ -1,0 +1,58 @@
+{
+  "name": "chrome-github-themes",
+  "version": "1.0.0",
+  "description": "A lightweight Chrome extension that applies popular IDE themes to GitHub's interface",
+  "main": "manifest.json",
+  "scripts": {
+    "dev": "echo 'Development mode - Load extension in Chrome Developer mode'",
+    "build": "npm run clean && npm run copy-files",
+    "clean": "rm -rf dist",
+    "copy-files": "mkdir -p dist && cp -r manifest.json background content popup themes assets dist/",
+    "generate-icons": "node generate-icons.js",
+    "convert-icons": "./convert-icons.sh",
+    "icons": "npm run generate-icons && npm run convert-icons",
+    "lint": "eslint background/service-worker.js content/theme-injector.js popup/popup.js",
+    "lint:css": "stylelint themes/*.css popup/popup.css",
+    "format": "prettier --write background/service-worker.js content/theme-injector.js popup/popup.js",
+    "package": "npm run build && cd dist && zip -r ../chrome-github-themes.zip .",
+    "generate-icons": "node generate-icons.js",
+    "test": "echo 'No tests specified yet'",
+    "validate": "web-ext lint --source-dir=."
+  },
+  "keywords": [
+    "chrome",
+    "extension",
+    "github",
+    "themes",
+    "ide",
+    "gruvbox",
+    "molokai",
+    "catppuccin",
+    "solarized",
+    "nord",
+    "dark-theme"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "homepage": "https://github.com/yourusername/chrome-github-themes",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/chrome-github-themes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/chrome-github-themes/issues"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0",
+    "stylelint": "^15.0.0",
+    "stylelint-config-standard": "^34.0.0",
+    "web-ext": "^7.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "browserslist": [
+    "Chrome >= 88"
+  ]
+}

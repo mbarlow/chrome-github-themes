@@ -1,0 +1,261 @@
+/* Nord Theme for Chrome GitHub Themes Extension
+ * Based on the popular Nord color scheme by Arctic Ice Studio
+ */
+
+@import url('base.css');
+
+:root {
+  /* Primary colors */
+  --gh-bg-primary: #2e3440;
+  --gh-bg-secondary: #3b4252;
+  --gh-bg-tertiary: #434c5e;
+
+  /* Text colors */
+  --gh-fg-primary: #d8dee9;
+  --gh-fg-secondary: #e5e9f0;
+  --gh-fg-tertiary: #eceff4;
+
+  /* Border colors */
+  --gh-border: #434c5e;
+  --gh-border-muted: #3b4252;
+
+  /* Accent colors */
+  --gh-accent: #88c0d0;
+  --gh-accent-rgb: 136, 192, 208;
+
+  /* Status colors */
+  --gh-error: #bf616a;
+  --gh-success: #a3be8c;
+  --gh-warning: #ebcb8b;
+
+  /* Nord specific colors for syntax highlighting */
+  --nord0: #2e3440;
+  --nord1: #3b4252;
+  --nord2: #434c5e;
+  --nord3: #4c566a;
+  --nord4: #d8dee9;
+  --nord5: #e5e9f0;
+  --nord6: #eceff4;
+  --nord7: #8fbcbb;
+  --nord8: #88c0d0;
+  --nord9: #81a1c1;
+  --nord10: #5e81ac;
+  --nord11: #bf616a;
+  --nord12: #d08770;
+  --nord13: #ebcb8b;
+  --nord14: #a3be8c;
+  --nord15: #b48ead;
+}
+
+/* Syntax highlighting overrides for better Nord experience */
+.pl-c,
+.pl-c1 {
+  color: var(--nord3) !important;
+}
+
+.pl-k,
+.pl-kos {
+  color: var(--nord9) !important;
+}
+
+.pl-s,
+.pl-pds {
+  color: var(--nord14) !important;
+}
+
+.pl-en {
+  color: var(--nord8) !important;
+}
+
+.pl-ent {
+  color: var(--nord11) !important;
+}
+
+.pl-smi {
+  color: var(--nord4) !important;
+}
+
+.pl-v {
+  color: var(--nord7) !important;
+}
+
+.pl-mi1 {
+  color: var(--nord14) !important;
+  background-color: rgba(163, 190, 140, 0.2) !important;
+}
+
+.pl-md {
+  color: var(--nord11) !important;
+  background-color: rgba(191, 97, 106, 0.2) !important;
+}
+
+.pl-ms {
+  color: var(--nord15) !important;
+}
+
+.pl-mh {
+  color: var(--nord12) !important;
+}
+
+/* Enhanced link styling */
+a {
+  color: var(--nord8) !important;
+}
+
+a:hover {
+  color: var(--nord7) !important;
+}
+
+/* File tree icons */
+.octicon-file-directory-fill {
+  color: var(--nord9) !important;
+}
+
+.octicon-file {
+  color: var(--gh-fg-secondary) !important;
+}
+
+/* Special highlighting for important elements */
+.flash-error {
+  background-color: rgba(191, 97, 106, 0.15) !important;
+  border-color: var(--gh-error) !important;
+}
+
+.flash-success {
+  background-color: rgba(163, 190, 140, 0.15) !important;
+  border-color: var(--gh-success) !important;
+}
+
+.flash-warn {
+  background-color: rgba(235, 203, 139, 0.15) !important;
+  border-color: var(--gh-warning) !important;
+}
+
+/* Language-specific syntax highlighting */
+.highlight .nf {
+  color: var(--nord8) !important;
+}
+
+.highlight .nb {
+  color: var(--nord9) !important;
+}
+
+.highlight .nc {
+  color: var(--nord7) !important;
+}
+
+.highlight .nn {
+  color: var(--nord4) !important;
+}
+
+.highlight .no {
+  color: var(--nord15) !important;
+}
+
+.highlight .ni {
+  color: var(--nord11) !important;
+}
+
+.highlight .nt {
+  color: var(--nord11) !important;
+}
+
+.highlight .nv {
+  color: var(--nord7) !important;
+}
+
+.highlight .o {
+  color: var(--nord9) !important;
+}
+
+.highlight .ow {
+  color: var(--nord9) !important;
+}
+
+.highlight .p {
+  color: var(--nord4) !important;
+}
+
+.highlight .w {
+  color: var(--nord4) !important;
+}
+
+/* Custom Nord elements */
+.btn-primary:hover {
+  background-color: var(--nord7) !important;
+}
+
+.Counter {
+  background-color: var(--nord2) !important;
+  color: var(--nord4) !important;
+}
+
+.Label--accent {
+  background-color: var(--nord8) !important;
+  color: var(--nord0) !important;
+}
+
+.Label--success {
+  background-color: var(--nord14) !important;
+  color: var(--nord0) !important;
+}
+
+.Label--danger {
+  background-color: var(--nord11) !important;
+  color: var(--nord0) !important;
+}
+
+.Label--warning {
+  background-color: var(--nord13) !important;
+  color: var(--nord0) !important;
+}
+
+/* Diff improvements */
+.pl-mi {
+  color: var(--nord14) !important;
+  background-color: rgba(163, 190, 140, 0.1) !important;
+}
+
+.pl-mi1 {
+  color: var(--nord14) !important;
+  background-color: rgba(163, 190, 140, 0.1) !important;
+}
+
+.pl-md {
+  color: var(--nord11) !important;
+  background-color: rgba(191, 97, 106, 0.1) !important;
+}
+
+/* Code block enhancements */
+.blob-code-hunk {
+  background-color: var(--nord1) !important;
+  border-color: var(--nord2) !important;
+}
+
+/* Pull request review styling */
+.review-thread-reply {
+  background-color: var(--nord1) !important;
+  border-color: var(--nord2) !important;
+}
+
+/* Issue labels */
+.IssueLabel {
+  background-color: var(--nord2) !important;
+  color: var(--nord4) !important;
+}
+
+/* Status indicators */
+.State--open {
+  background-color: var(--nord14) !important;
+  color: var(--nord0) !important;
+}
+
+.State--closed {
+  background-color: var(--nord11) !important;
+  color: var(--nord0) !important;
+}
+
+.State--merged {
+  background-color: var(--nord15) !important;
+  color: var(--nord0) !important;
+}

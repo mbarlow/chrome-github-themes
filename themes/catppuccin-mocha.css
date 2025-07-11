@@ -1,0 +1,201 @@
+/* Catppuccin Mocha Theme for Chrome GitHub Themes Extension
+ * Based on the popular Catppuccin color scheme by Catppuccin Community
+ */
+
+@import url('base.css');
+
+:root {
+  /* Primary colors */
+  --gh-bg-primary: #1e1e2e;
+  --gh-bg-secondary: #313244;
+  --gh-bg-tertiary: #45475a;
+
+  /* Text colors */
+  --gh-fg-primary: #cdd6f4;
+  --gh-fg-secondary: #bac2de;
+  --gh-fg-tertiary: #a6adc8;
+
+  /* Border colors */
+  --gh-border: #45475a;
+  --gh-border-muted: #313244;
+
+  /* Accent colors */
+  --gh-accent: #89b4fa;
+  --gh-accent-rgb: 137, 180, 250;
+
+  /* Status colors */
+  --gh-error: #f38ba8;
+  --gh-success: #a6e3a1;
+  --gh-warning: #f9e2af;
+
+  /* Catppuccin specific colors for syntax highlighting */
+  --catppuccin-rosewater: #f5e0dc;
+  --catppuccin-flamingo: #f2cdcd;
+  --catppuccin-pink: #f5c2e7;
+  --catppuccin-mauve: #cba6f7;
+  --catppuccin-red: #f38ba8;
+  --catppuccin-maroon: #eba0ac;
+  --catppuccin-peach: #fab387;
+  --catppuccin-yellow: #f9e2af;
+  --catppuccin-green: #a6e3a1;
+  --catppuccin-teal: #94e2d5;
+  --catppuccin-sky: #89dceb;
+  --catppuccin-sapphire: #74c7ec;
+  --catppuccin-blue: #89b4fa;
+  --catppuccin-lavender: #b4befe;
+  --catppuccin-text: #cdd6f4;
+  --catppuccin-subtext1: #bac2de;
+  --catppuccin-subtext0: #a6adc8;
+  --catppuccin-overlay2: #9399b2;
+  --catppuccin-overlay1: #7f849c;
+  --catppuccin-overlay0: #6c7086;
+  --catppuccin-surface2: #585b70;
+  --catppuccin-surface1: #45475a;
+  --catppuccin-surface0: #313244;
+  --catppuccin-base: #1e1e2e;
+  --catppuccin-mantle: #181825;
+  --catppuccin-crust: #11111b;
+}
+
+/* Syntax highlighting overrides for better Catppuccin experience */
+.pl-c,
+.pl-c1 {
+  color: var(--catppuccin-overlay0) !important;
+}
+
+.pl-k,
+.pl-kos {
+  color: var(--catppuccin-mauve) !important;
+}
+
+.pl-s,
+.pl-pds {
+  color: var(--catppuccin-green) !important;
+}
+
+.pl-en {
+  color: var(--catppuccin-blue) !important;
+}
+
+.pl-ent {
+  color: var(--catppuccin-red) !important;
+}
+
+.pl-smi {
+  color: var(--catppuccin-text) !important;
+}
+
+.pl-v {
+  color: var(--catppuccin-lavender) !important;
+}
+
+.pl-mi1 {
+  color: var(--catppuccin-green) !important;
+  background-color: rgba(166, 227, 161, 0.2) !important;
+}
+
+.pl-md {
+  color: var(--catppuccin-red) !important;
+  background-color: rgba(243, 139, 168, 0.2) !important;
+}
+
+.pl-ms {
+  color: var(--catppuccin-pink) !important;
+}
+
+/* Enhanced link styling */
+a {
+  color: var(--catppuccin-sapphire) !important;
+}
+
+a:hover {
+  color: var(--catppuccin-sky) !important;
+}
+
+/* File tree icons */
+.octicon-file-directory-fill {
+  color: var(--catppuccin-blue) !important;
+}
+
+.octicon-file {
+  color: var(--gh-fg-secondary) !important;
+}
+
+/* Special highlighting for important elements */
+.flash-error {
+  background-color: rgba(243, 139, 168, 0.15) !important;
+  border-color: var(--gh-error) !important;
+}
+
+.flash-success {
+  background-color: rgba(166, 227, 161, 0.15) !important;
+  border-color: var(--gh-success) !important;
+}
+
+.flash-warn {
+  background-color: rgba(249, 226, 175, 0.15) !important;
+  border-color: var(--gh-warning) !important;
+}
+
+/* Language-specific syntax highlighting */
+.highlight .nf {
+  color: var(--catppuccin-blue) !important;
+}
+
+.highlight .nb {
+  color: var(--catppuccin-peach) !important;
+}
+
+.highlight .nc {
+  color: var(--catppuccin-yellow) !important;
+}
+
+.highlight .nn {
+  color: var(--catppuccin-text) !important;
+}
+
+.highlight .no {
+  color: var(--catppuccin-mauve) !important;
+}
+
+.highlight .ni {
+  color: var(--catppuccin-red) !important;
+}
+
+.highlight .nt {
+  color: var(--catppuccin-red) !important;
+}
+
+.highlight .nv {
+  color: var(--catppuccin-lavender) !important;
+}
+
+/* Custom Catppuccin elements */
+.btn-primary:hover {
+  background-color: var(--catppuccin-sapphire) !important;
+}
+
+.Counter {
+  background-color: var(--catppuccin-surface2) !important;
+  color: var(--catppuccin-text) !important;
+}
+
+.Label--accent {
+  background-color: var(--catppuccin-blue) !important;
+  color: var(--catppuccin-base) !important;
+}
+
+.Label--success {
+  background-color: var(--catppuccin-green) !important;
+  color: var(--catppuccin-base) !important;
+}
+
+.Label--danger {
+  background-color: var(--catppuccin-red) !important;
+  color: var(--catppuccin-base) !important;
+}
+
+.Label--warning {
+  background-color: var(--catppuccin-yellow) !important;
+  color: var(--catppuccin-base) !important;
+}

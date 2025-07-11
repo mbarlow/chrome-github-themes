@@ -1,0 +1,262 @@
+/* Base CSS for Chrome GitHub Themes Extension
+ * Common GitHub overrides and CSS custom properties setup
+ */
+
+/* Reset GitHub's theme variables to use our custom properties */
+:root {
+  /* Background colors */
+  --color-canvas-default: var(--gh-bg-primary) !important;
+  --color-canvas-subtle: var(--gh-bg-secondary) !important;
+  --color-canvas-inset: var(--gh-bg-tertiary) !important;
+
+  /* Text colors */
+  --color-fg-default: var(--gh-fg-primary) !important;
+  --color-fg-muted: var(--gh-fg-secondary) !important;
+  --color-fg-subtle: var(--gh-fg-tertiary) !important;
+
+  /* Border colors */
+  --color-border-default: var(--gh-border) !important;
+  --color-border-muted: var(--gh-border-muted) !important;
+
+  /* Accent colors */
+  --color-accent-fg: var(--gh-accent) !important;
+  --color-accent-emphasis: var(--gh-accent) !important;
+
+  /* Status colors */
+  --color-danger-fg: var(--gh-error) !important;
+  --color-success-fg: var(--gh-success) !important;
+  --color-attention-fg: var(--gh-warning) !important;
+}
+
+/* Header overrides */
+.Header,
+.Header-old {
+  background-color: var(--gh-bg-primary) !important;
+  border-bottom: 1px solid var(--gh-border) !important;
+}
+
+.Header .header-search-input,
+.Header-old .header-search-input {
+  background-color: var(--gh-bg-secondary) !important;
+  border-color: var(--gh-border) !important;
+  color: var(--gh-fg-primary) !important;
+}
+
+/* Navigation */
+.UnderlineNav-item {
+  color: var(--gh-fg-secondary) !important;
+}
+
+.UnderlineNav-item:hover {
+  color: var(--gh-fg-primary) !important;
+}
+
+.UnderlineNav-item[aria-current="page"] {
+  color: var(--gh-accent) !important;
+  border-bottom-color: var(--gh-accent) !important;
+}
+
+/* Repository content */
+.repository-content {
+  background-color: var(--gh-bg-primary) !important;
+}
+
+/* File tree and directory listings */
+.js-navigation-item {
+  background-color: var(--gh-bg-primary) !important;
+}
+
+.js-navigation-item:hover {
+  background-color: var(--gh-bg-secondary) !important;
+}
+
+/* Code blocks and syntax highlighting */
+.highlight,
+.blob-code,
+.js-file-line-container {
+  background-color: var(--gh-bg-primary) !important;
+  color: var(--gh-fg-primary) !important;
+}
+
+.blob-code-inner {
+  color: var(--gh-fg-primary) !important;
+}
+
+.blob-num {
+  background-color: var(--gh-bg-secondary) !important;
+  color: var(--gh-fg-secondary) !important;
+  border-right: 1px solid var(--gh-border) !important;
+}
+
+/* Diff views */
+.file-diff-split .blob-code-addition {
+  background-color: rgba(0, 255, 0, 0.1) !important;
+}
+
+.file-diff-split .blob-code-deletion {
+  background-color: rgba(255, 0, 0, 0.1) !important;
+}
+
+/* Comments and discussions */
+.TimelineItem-body {
+  background-color: var(--gh-bg-primary) !important;
+  border: 1px solid var(--gh-border) !important;
+}
+
+.comment-body {
+  background-color: var(--gh-bg-primary) !important;
+  color: var(--gh-fg-primary) !important;
+}
+
+/* Issues and pull requests */
+.issue-meta-section {
+  background-color: var(--gh-bg-secondary) !important;
+  border: 1px solid var(--gh-border) !important;
+}
+
+.State {
+  background-color: var(--gh-accent) !important;
+  color: var(--gh-bg-primary) !important;
+}
+
+/* Sidebar */
+.Layout-sidebar {
+  background-color: var(--gh-bg-primary) !important;
+}
+
+.BorderGrid-cell {
+  border-color: var(--gh-border) !important;
+}
+
+/* Tables */
+.markdown-body table tr {
+  background-color: var(--gh-bg-primary) !important;
+  border-top: 1px solid var(--gh-border) !important;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: var(--gh-bg-secondary) !important;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  border: 1px solid var(--gh-border) !important;
+}
+
+/* Forms and inputs */
+.form-control,
+.form-select {
+  background-color: var(--gh-bg-secondary) !important;
+  border-color: var(--gh-border) !important;
+  color: var(--gh-fg-primary) !important;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--gh-accent) !important;
+  box-shadow: 0 0 0 3px rgba(var(--gh-accent-rgb), 0.3) !important;
+}
+
+/* Buttons */
+.btn {
+  background-color: var(--gh-bg-secondary) !important;
+  border-color: var(--gh-border) !important;
+  color: var(--gh-fg-primary) !important;
+}
+
+.btn:hover {
+  background-color: var(--gh-bg-tertiary) !important;
+}
+
+.btn-primary {
+  background-color: var(--gh-accent) !important;
+  border-color: var(--gh-accent) !important;
+  color: var(--gh-bg-primary) !important;
+}
+
+/* Labels and badges */
+.Label {
+  background-color: var(--gh-bg-secondary) !important;
+  color: var(--gh-fg-primary) !important;
+  border: 1px solid var(--gh-border) !important;
+}
+
+/* Tooltips and popovers */
+.Popover {
+  background-color: var(--gh-bg-primary) !important;
+  border: 1px solid var(--gh-border) !important;
+}
+
+/* Markdown content */
+.markdown-body {
+  color: var(--gh-fg-primary) !important;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  color: var(--gh-fg-primary) !important;
+  border-bottom-color: var(--gh-border) !important;
+}
+
+.markdown-body blockquote {
+  border-left-color: var(--gh-border) !important;
+  color: var(--gh-fg-secondary) !important;
+}
+
+.markdown-body code {
+  background-color: var(--gh-bg-secondary) !important;
+  color: var(--gh-accent) !important;
+}
+
+.markdown-body pre {
+  background-color: var(--gh-bg-secondary) !important;
+}
+
+/* Activity feed */
+.news {
+  background-color: var(--gh-bg-primary) !important;
+}
+
+.Box {
+  background-color: var(--gh-bg-primary) !important;
+  border: 1px solid var(--gh-border) !important;
+}
+
+.Box-header {
+  background-color: var(--gh-bg-secondary) !important;
+  border-bottom: 1px solid var(--gh-border) !important;
+}
+
+/* Actions and CI */
+.checks-summary {
+  background-color: var(--gh-bg-primary) !important;
+  border: 1px solid var(--gh-border) !important;
+}
+
+/* Search results */
+.search-results {
+  background-color: var(--gh-bg-primary) !important;
+}
+
+.search-title {
+  color: var(--gh-accent) !important;
+}
+
+/* Settings pages */
+.Subhead {
+  border-bottom: 1px solid var(--gh-border) !important;
+}
+
+.Subhead-heading {
+  color: var(--gh-fg-primary) !important;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--gh-bg-secondary) !important;
+  border-top: 1px solid var(--gh-border) !important;
+}

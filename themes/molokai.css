@@ -1,0 +1,146 @@
+/* Molokai Theme for Chrome GitHub Themes Extension
+ * Based on the popular Molokai color scheme by Tomas Restrepo
+ */
+
+@import url('base.css');
+
+:root {
+  /* Primary colors */
+  --gh-bg-primary: #1b1d1e;
+  --gh-bg-secondary: #232526;
+  --gh-bg-tertiary: #2d2e2f;
+
+  /* Text colors */
+  --gh-fg-primary: #f8f8f2;
+  --gh-fg-secondary: #f8f8f0;
+  --gh-fg-tertiary: #75715e;
+
+  /* Border colors */
+  --gh-border: #3e3d32;
+  --gh-border-muted: #232526;
+
+  /* Accent colors */
+  --gh-accent: #ae81ff;
+  --gh-accent-rgb: 174, 129, 255;
+
+  /* Status colors */
+  --gh-error: #f92672;
+  --gh-success: #a6e22e;
+  --gh-warning: #fd971f;
+
+  /* Molokai specific colors for syntax highlighting */
+  --molokai-red: #f92672;
+  --molokai-green: #a6e22e;
+  --molokai-yellow: #e6db74;
+  --molokai-blue: #66d9ef;
+  --molokai-purple: #ae81ff;
+  --molokai-cyan: #a1efe4;
+  --molokai-orange: #fd971f;
+  --molokai-gray: #75715e;
+  --molokai-white: #f8f8f2;
+}
+
+/* Syntax highlighting overrides for better Molokai experience */
+.pl-c,
+.pl-c1 {
+  color: var(--molokai-gray) !important;
+}
+
+.pl-k,
+.pl-kos {
+  color: var(--molokai-red) !important;
+}
+
+.pl-s,
+.pl-pds {
+  color: var(--molokai-yellow) !important;
+}
+
+.pl-en {
+  color: var(--molokai-green) !important;
+}
+
+.pl-ent {
+  color: var(--molokai-red) !important;
+}
+
+.pl-smi {
+  color: var(--molokai-white) !important;
+}
+
+.pl-v {
+  color: var(--molokai-blue) !important;
+}
+
+.pl-mi1 {
+  color: var(--molokai-green) !important;
+  background-color: rgba(166, 226, 46, 0.2) !important;
+}
+
+.pl-md {
+  color: var(--molokai-red) !important;
+  background-color: rgba(249, 38, 114, 0.2) !important;
+}
+
+.pl-ms {
+  color: var(--molokai-purple) !important;
+}
+
+/* Enhanced link styling */
+a {
+  color: var(--molokai-blue) !important;
+}
+
+a:hover {
+  color: var(--molokai-cyan) !important;
+}
+
+/* File tree icons */
+.octicon-file-directory-fill {
+  color: var(--molokai-blue) !important;
+}
+
+.octicon-file {
+  color: var(--gh-fg-secondary) !important;
+}
+
+/* Special highlighting for important elements */
+.flash-error {
+  background-color: rgba(249, 38, 114, 0.15) !important;
+  border-color: var(--gh-error) !important;
+}
+
+.flash-success {
+  background-color: rgba(166, 226, 46, 0.15) !important;
+  border-color: var(--gh-success) !important;
+}
+
+.flash-warn {
+  background-color: rgba(253, 151, 31, 0.15) !important;
+  border-color: var(--gh-warning) !important;
+}
+
+/* Language-specific syntax highlighting */
+.highlight .nf {
+  color: var(--molokai-green) !important;
+}
+
+.highlight .nb {
+  color: var(--molokai-blue) !important;
+}
+
+.highlight .nc {
+  color: var(--molokai-blue) !important;
+}
+
+.highlight .nn {
+  color: var(--molokai-white) !important;
+}
+
+.highlight .no {
+  color: var(--molokai-purple) !important;
+}
+
+.highlight .ni {
+  color: var(--molokai-red) !important;
+}

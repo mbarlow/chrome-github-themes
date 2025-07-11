@@ -71,18 +71,12 @@ Chrome GitHub Themes is a lightweight Chrome extension that brings your favorite
    cd chrome-github-themes
    ```
 
-2. Generate extension icons:
-   ```bash
-   npm run generate-icons
-   ./convert-icons.sh
-   ```
-
-3. Load in Chrome:
+2. Load in Chrome:
    - Open `chrome://extensions/`
    - Enable "Developer mode"
    - Click "Load unpacked" and select the project folder
 
-4. Start theming:
+3. Start theming:
    - Visit any GitHub page
    - Click the extension icon
    - Select your favorite theme
@@ -113,9 +107,6 @@ cd chrome-github-themes
 # Install development dependencies
 npm install
 
-# Generate extension icons (requires ImageMagick)
-npm run icons
-
 # Build for distribution
 npm run build
 
@@ -143,10 +134,8 @@ chrome-github-themes/
 │   ├── solarized-dark.css
 │   └── nord.css
 ├── assets/
-│   ├── icons/               # Extension icons (PNG files)
+│   ├── icons/               # Extension icons (SVG + PNG files)
 │   └── previews/            # Theme screenshots
-├── generate-icons.js        # Icon generation script
-├── convert-icons.sh         # SVG to PNG conversion script
 └── docs/
     └── README.md            # Detailed documentation
 ```
@@ -179,29 +168,17 @@ chrome-github-themes/
 - **Network Requests**: Zero
 - **Page Load Impact**: None
 
-## 🎨 Icon Generation
+## 🎨 Icons
 
-The extension includes an automated icon generation system:
+The extension includes a clean SVG icon design with PNG versions for all required sizes:
 
-```bash
-# Generate SVG icon and conversion script
-npm run generate-icons
+- `assets/icons/icon.svg` - Source SVG file
+- `assets/icons/icon16.png` - 16x16 PNG 
+- `assets/icons/icon32.png` - 32x32 PNG
+- `assets/icons/icon48.png` - 48x48 PNG  
+- `assets/icons/icon128.png` - 128x128 PNG
 
-# Convert SVG to PNG files (requires ImageMagick)
-./convert-icons.sh
-
-# Or do both in one command
-npm run icons
-```
-
-**Requirements:**
-- ImageMagick: `brew install imagemagick` (Mac) or `sudo apt install imagemagick` (Linux)
-
-The system creates a professional SVG icon with:
-- GitHub-style code brackets
-- Theme color dots representing each available theme
-- Gradient background with proper contrast
-- All required sizes: 16x16, 32x32, 48x48, 128x128
+The icon features GitHub-style code brackets with theme color dots representing each available theme.
 
 ## 🔒 Privacy & Security
 
